@@ -31,7 +31,7 @@ $(document).ready(function() {
     function displayArcher(){
         $("#images").html('<img id="stupidTest" height="100" width="100" src="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824" state="still" animate="https://vignette2.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437" still="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824">');
         console.log("display archer fucntion fired");
-        
+
     }
     //----------Function to Pause Giphs ----------
     $("#stupidTest").click(function () {
@@ -58,14 +58,17 @@ $(document).ready(function() {
     // LISTENS FOR BUTTON EVEN --- RENDERS BUTTONS ---ALLOWS ADDITIONAL BUTTONS TO BE MADE------
 
     // Initial array of animals
-    var animals = ["Doggos", "Gold fish", "Hippo", "ardvark", "giraffe", "snail", "orka", "sperm whale", "woofer", "pupper", "bumblebee", "horse"];
+    var animals = ["Doggos", "Gold fish", "Hippo", "Giraffe", "Snail", "Orca", "elephant", "woofer", "pupper", "bee", "horse"];
     console.log(animals);
     // displayGiphy function re-renders the HTML to display the appropriate content
     function displayGiphy() {
 
+        //----------This empties the images DIV-----------
+        $("#images").empty();
+
 
         var animal = $(this).attr("data-name");
-        //TO-DO update the query URL for 10 IMAGES
+        
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
         console.log(queryURL);
 
@@ -90,33 +93,33 @@ $(document).ready(function() {
                 console.log(response.data[i].images.original_still.url);
 
                 // Creating an element to have the rating displayed
-                var pOne = $("<h3>").text("Rating: " + rating);
+                var pOne = $('<h3 class="rainbow">').text("Rating: " + rating);
 
                 // Displaying the rating
                 animalDiv.append(pOne);
+                // $("#images").html(pOne);
 
                 // Retrieving the URL for the image
-                var imgURL = response.data[i].images.original_still.url;
-                var imgAnimate = response.data[i].images.original.url;
+                var imgURL = response.data[i].images.fixed_height_still.url;
+                var imgAnimate = response.data[i].images.fixed_height.url;
                 console.log("animate" + imgAnimate);
                 console.log("still" + imgURL);
 
                 var image = $("<img>").attr({
                     src: imgURL,
-                    class: "giph",
+                    class: "giph-image",
                     state: "still",
                     still: imgURL,
                     animate: imgAnimate,
                     id: "image"+i,
                 })
 
-                //<iframe src="https://giphy.com/embed/l2Sq0aDdjWbqgGsGQ" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dogs-lookhuman-doggos-l2Sq0aDdjWbqgGsGQ">via GIPHY</a></p>
-
                 // Appending the image
-                animalDiv.append(image);
+                 animalDiv.append(image);
+                //$("#images").html(image);
 
                 // Putting the entire image above the previous giphy image
-                $("#images").prepend(animalDiv);
+                $("#images").append(animalDiv);
             }
         });
     }
@@ -168,14 +171,8 @@ $(document).ready(function() {
     // Calling the renderButtons function to display the intial buttons
     renderButtons();
 
-    // ---------_Experiment to get clickfunction working ---------
-    $("animal_gif").click(function() {
-        alert("You clicked a WINDOW OMG!!!");
-        alert($(this).attr("class"));
-       
-
-    });
-    $(document).on("click", "#image9", function (){
+   
+    $(document).on("click", ".giph-image", function (){
         console.log("img.giph clickfunction");
         // $("#images").empty();
         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
