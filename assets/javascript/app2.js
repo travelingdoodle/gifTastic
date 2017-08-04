@@ -8,7 +8,7 @@ $(document).ready(function() {
     //     var newDiv = $("<div>");
     //     var imgURL = "https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824";
     //     console.log(imgURL);
-    //     var imgAnimate = "http://vignette2.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437";
+    //     var imgAnimate = "https://vignette2.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437";
     //     var image = $("<img>").attr({
     //                 src: imgURL,
     //                 id: "stupidTest",
@@ -29,7 +29,7 @@ $(document).ready(function() {
     //     console.log("body click");
     // });
     function displayArcher(){
-        $("#images").html('<img id="stupidTest" height="100" width="100" src="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824" state="still" animate="http://vignette2.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437" still="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824">');
+        $("#images").html('<img id="stupidTest" height="100" width="100" src="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824" state="still" animate="https://vignette2.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437" still="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824">');
     }
     //----------Function to Pause Giphs ----------
     $("#stupidTest").click(function () {
