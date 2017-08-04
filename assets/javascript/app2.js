@@ -120,6 +120,10 @@ $(document).ready(function() {
 
                 // Putting the entire image above the previous giphy image
                 $("#images").append(animalDiv);
+
+                // ---PUTTING IMGS AT BOTTM OF PAGE ------
+                // $("#ryanG").arrt();
+
             }
         });
     }
@@ -191,6 +195,8 @@ $(document).ready(function() {
             $(this).attr("state", "still");
         }
     });
+
+
 
 ///document.ready ending
 });

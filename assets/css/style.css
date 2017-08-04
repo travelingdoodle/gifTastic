@@ -1,3 +1,13 @@
+/* CLEAR FIX */
+#images:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+dontGo {
+    float: left;
+}
+
 #animal-buttons, #button, #animal-form, #images {
     margin: 10px;
     
