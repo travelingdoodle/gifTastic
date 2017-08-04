@@ -58,7 +58,7 @@ $(document).ready(function() {
     // LISTENS FOR BUTTON EVEN --- RENDERS BUTTONS ---ALLOWS ADDITIONAL BUTTONS TO BE MADE------
 
     // Initial array of animals
-    var animals = ["Doggos", "Gold fish", "Hippo", "Giraffe", "Snail", "Orca", "elephant", "woofer", "pupper", "bee", "horse"];
+    var animals = ["Doggos", "Space Cat", "TRUMP", "Gold fish", "Hippo", "Salt Bae", "Giraffe", "Snail", "Orca", "Elephant", "Woofer", "Pupper", "Bee", "Horse"];
     console.log(animals);
     // displayGiphy function re-renders the HTML to display the appropriate content
     function displayGiphy() {
