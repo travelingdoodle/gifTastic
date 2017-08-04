@@ -154,6 +154,7 @@ $(document).ready(function() {
 
     // ----------This function handles events where an animal button is clicked----------
     $("#addAnimal").on("click", function (event) {
+        
         event.preventDefault();
         // This line grabs the input from the textbox
         var newAnimal = $("#animal-input").val().trim();
@@ -163,6 +164,7 @@ $(document).ready(function() {
 
         // Calling renderButtons which handles the processing of our animals array
         renderButtons();
+        $("#animal-input").val('');
     });
 
     // Adding a click event listener to all elements with a class of "animals"
