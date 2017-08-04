@@ -13,12 +13,23 @@ body {
 }
 
 label {
-  text-align:center;
+  text-align: center;
 }
-label {
-  color:rgba(100, 50, 255, .8);
+
+.slowRainbow {
+    font-weight: 900;
+    text-align: center;
+    /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 3s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 3s infinite; 
 }
 .rainbow {
+    text-align: center;
    /* Chrome, Safari, Opera */
   -webkit-animation: rainbow 1s infinite; 
   

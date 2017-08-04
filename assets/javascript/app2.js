@@ -140,7 +140,7 @@ $(document).ready(function() {
             // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
             var a = $("<button>");
             // Adding a class of animals to our button
-            a.addClass("animals btn btn-primary");
+            a.addClass("animals btn btn-danger");
             // Adding a data-attribute
             a.attr("data-name", animals[i]);
             // Adding a data-attribute
