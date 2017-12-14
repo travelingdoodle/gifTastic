@@ -1,4 +1,4 @@
-# A GiffTastic Site
+# A Gif-Tastic Site
 
 ## What it do
 
