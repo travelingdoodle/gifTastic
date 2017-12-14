@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // ---------------- MOVIE-WORKING-APP--SOLVED ------------------
+    // ----Reference-- MOVIE-WORKING-APP--SOLVED -- & Pausing-giphs------------------
     
     //_-_-_-_-_-_-_-_DELETE 5 THROUGH 47 -_-_-_---_-_-_-_-_-_-_
     //-----set image function-------
